@@ -7,14 +7,14 @@ pipeline {
         stage('Analyze') {
             steps {
                 sh '''
-                    env
+                    date
                 '''
             }
         }
         stage('Test') {
             steps {
                 sh '''
-                    whoami
+                    ls -la
                 '''
             }
         }   
