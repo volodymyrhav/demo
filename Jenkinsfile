@@ -1,14 +1,23 @@
 pipeline {
+    agent any
+    environment{
+      FLUTTER_VERSION         = "2.2.2"
+    }
     stages {
-        stage('build') {
+        stage('Analyze') {
             steps {
-                sh 'python --version'
+                sh '''
+                    env
+                '''
             }
         }
-        stage('test') {
+        stage('Test') {
             steps {
-                sh 'whoami'
-            }         
-        }
+                sh '''
+                    whoami
+                '''
+            }
+        }   
+
     }
 }
